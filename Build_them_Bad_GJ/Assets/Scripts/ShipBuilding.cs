@@ -14,8 +14,20 @@ public class ShipBuilding : MonoBehaviour
     [SerializeField] private GameObject shield_2 = null;
     [SerializeField] private GameObject shield_3 = null;
 
+    // Weapon types
+    [SerializeField] private GameObject weapon_1 = null;
+    [SerializeField] private GameObject weapon_2 = null;
+    [SerializeField] private GameObject weapon_3 = null;
 
+    // Engine types
+    [SerializeField] private GameObject engine_1 = null;
+    [SerializeField] private GameObject engine_2 = null;
+    [SerializeField] private GameObject engine_3 = null;
 
+    // Special weapon types
+    [SerializeField] private GameObject special_1 = null;
+    [SerializeField] private GameObject special_2 = null;
+    [SerializeField] private GameObject special_3 = null;
 
     // Start is called before the first frame update
     void Start()
