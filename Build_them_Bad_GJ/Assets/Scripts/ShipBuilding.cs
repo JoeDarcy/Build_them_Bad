@@ -198,9 +198,13 @@ public class ShipBuilding : MonoBehaviour
         p2_totalShipStrength = p2_hullStrength + p2_shieldStrength + p2_weaponStrength;
 
         //=================================== Build Progress ===================================
-        // Check if both ships are built to minimum strength
-        if (p1_totalShipStrength >= 6 && p2_totalShipStrength >= 6) { // Fix this shit!
+        // Check if both ships are built to minimum strength and contain at least one of everything
+        if ((p1_hullStrength > 0 && p1_shieldStrength > 0 && p1_weaponStrength > 0) && p1_totalShipStrength >= 6 && (p2_hullStrength > 0 && p2_shieldStrength > 0 && p2_weaponStrength > 0) && p2_totalShipStrength >= 6) {
 	        shipBuildingComplete = true;
+        }
+        else
+        {
+	        shipBuildingComplete = false;
         }
 
         //=================================== Strength Output ===================================

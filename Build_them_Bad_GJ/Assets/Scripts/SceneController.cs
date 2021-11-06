@@ -29,5 +29,10 @@ public class SceneController : MonoBehaviour
 				SceneManager.LoadScene(sceneToLoad);
 			}
 		}
+		else
+		{
+			playButtonGreyOut.SetActive(true);
+			playButton.SetActive(false);
+		}
 	}
 }
