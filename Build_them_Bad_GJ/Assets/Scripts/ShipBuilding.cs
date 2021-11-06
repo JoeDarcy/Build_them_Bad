@@ -63,7 +63,7 @@ public class ShipBuilding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Output total ship stregnth
+        // Output total ship strength
         Debug.Log("Total Ship Strength: " + totalShipStrength);
         Debug.Log("Hull Strength: " + hullStrength);
         Debug.Log("Shield Strength: " + shieldStrength);
