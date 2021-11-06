@@ -172,7 +172,7 @@ public class ShipBuilding : MonoBehaviour
             p1_engineStrength = 3;
 	    }
 
-	    // Player 1 engine strength
+	    // Player 1 special weapon strength
 	    if (Player1ButtonSelection.p1_special_1_selected == true) {
             p1_specialWeaponStrength = 1;
 	    }
@@ -228,7 +228,7 @@ public class ShipBuilding : MonoBehaviour
 	        p2_engineStrength = 3;
         }
 
-        // Player 2 engine strength
+        // Player 2 special weapon strength
         if (Player2ButtonSelection.p2_special_1_selected == true) {
 	        p2_specialWeaponStrength = 1;
         }

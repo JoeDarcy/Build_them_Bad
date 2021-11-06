@@ -88,15 +88,15 @@ public class Player2ButtonSelection : MonoBehaviour
 
     // Player 2 engine selection button functions
     public void P2_engine_1_button() {
-	    p2_engine_3_selected = true;
-        p2_engine_1_selected = false;
+	    p2_engine_1_selected = true;
         p2_engine_2_selected = false;
+        p2_engine_3_selected = false;
     }
 
     public void P2_engine_2_button() {
-        p2_engine_3_selected = true;
+        p2_engine_2_selected = true;
         p2_engine_1_selected = false;
-        p2_engine_2_selected = false;
+        p2_engine_3_selected = false;
     }
 
     public void P2_engine_3_button() {
@@ -107,15 +107,15 @@ public class Player2ButtonSelection : MonoBehaviour
 
     // Player 2 special weapon selection button functions
     public void P2_special_1_button() {
-        p2_special_3_selected = true;
-        p2_special_1_selected = false;
+        p2_special_1_selected = true;
         p2_special_2_selected = false;
+        p2_special_3_selected = false;
     }
 
     public void P2_special_2_button() {
-        p2_special_3_selected = true;
+        p2_special_2_selected = true;
         p2_special_1_selected = false;
-        p2_special_2_selected = false;
+        p2_special_3_selected = false;
     }
 
     public void P2_special_3_button() {
