@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/03_Ship_Building.unity
+    path: Assets/Scenes/00_Menu.unity
+    guid: e3dfc57a74590c04bbd271b4815cc663
+  - enabled: 1
+    path: Assets/Scenes/01_Tutorial.unity
+    guid: 7d803868f5b8a4f47b52ee6ea2208823
+  - enabled: 1
+    path: Assets/Scenes/02_Ship_Building.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/03_Gameplay.unity
+    guid: 1a4e207bb59f74645a08c0c263157eff
+  - enabled: 1
+    path: Assets/Scenes/04_Winner.unity
+    guid: 6e4b4325d5f7b024484bb3223409ea03
+  - enabled: 1
+    path: Assets/Scenes/05_Credits.unity
+    guid: 9c01e112f338a6e4da649f144b3c3550
   m_configObjects: {}
