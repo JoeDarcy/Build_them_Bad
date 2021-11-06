@@ -455,7 +455,7 @@ public class ShipBuilding : MonoBehaviour
         if (Player2ButtonSelection.p2_engine_3_selected == true) {
 	        p2_engine_3.SetActive(true);
         } else {
-	        p1_engine_3.SetActive(false);
+	        p2_engine_3.SetActive(false);
         }
 
         // Special weapon selection
