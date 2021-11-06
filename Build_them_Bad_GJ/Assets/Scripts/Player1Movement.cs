@@ -10,12 +10,7 @@ public class Player1Movement : MonoBehaviour
 	[SerializeField] private float neg_Y_ShipSpeed = 0.0f;
 	[SerializeField] private float maxSpeed = 0.0f;
 	[SerializeField] private float accelerationSpeed = 0.0f;
-	[SerializeField] private float declerationSpeed = 0.0f;
-
-	[SerializeField] private string right = null;
-	[SerializeField] private string left = null;
-	[SerializeField] private string up = null;
-	[SerializeField] private string down = null;
+	[SerializeField] private float decelerationSpeed = 0.0f;
 
 	private bool rightPressed = false;
 	private bool leftPressed = false;
@@ -33,39 +28,39 @@ public class Player1Movement : MonoBehaviour
     {
 
 		// Right pressed
-	    if (Input.GetKeyDown(right))
+	    if (Input.GetKeyDown("d"))
 	    {
 			rightPressed = true;
 	    }
 		// Right released
-	    if (Input.GetKeyUp(right)) {
+	    if (Input.GetKeyUp("d")) {
 			rightPressed = false;
 	    }
 
 	    // Left pressed
-	    if (Input.GetKeyDown(left)) {
+	    if (Input.GetKeyDown("a")) {
 		    leftPressed = true;
 	    }
 	    // Left released
-	    if (Input.GetKeyUp(left)) {
+	    if (Input.GetKeyUp("a")) {
 		    leftPressed = false;
 	    }
 
 	    // Up pressed
-	    if (Input.GetKeyDown(up)) {
+	    if (Input.GetKeyDown("w")) {
 		    upPressed = true;
 	    }
 	    // Up released
-	    if (Input.GetKeyUp(up)) {
+	    if (Input.GetKeyUp("w")) {
 		    upPressed = false;
 	    }
 
 	    // Down pressed
-	    if (Input.GetKeyDown(down)) {
+	    if (Input.GetKeyDown("s")) {
 		    downPressed = true;
 	    }
 	    // Down released
-	    if (Input.GetKeyUp(down)) {
+	    if (Input.GetKeyUp("s")) {
 		    downPressed = false;
 	    }
 
@@ -78,7 +73,7 @@ public class Player1Movement : MonoBehaviour
 		}
 	    if (rightPressed == false) {
 			if (pos_X_ShipSpeed > 0) {
-				pos_X_ShipSpeed -= declerationSpeed;
+				pos_X_ShipSpeed -= decelerationSpeed;
 			} else if (pos_X_ShipSpeed < 0)
 			{
 				pos_X_ShipSpeed = 0;
@@ -94,7 +89,7 @@ public class Player1Movement : MonoBehaviour
 		}
 		if (leftPressed == false) {
 			if (neg_X_ShipSpeed < 0) {
-				neg_X_ShipSpeed += declerationSpeed;
+				neg_X_ShipSpeed += decelerationSpeed;
 			} else if (neg_X_ShipSpeed > 0) {
 				neg_X_ShipSpeed = 0;
 			}
@@ -108,7 +103,7 @@ public class Player1Movement : MonoBehaviour
 		}
 		if (upPressed == false) {
 			if (pos_Y_ShipSpeed > 0) {
-				pos_Y_ShipSpeed -= declerationSpeed;
+				pos_Y_ShipSpeed -= decelerationSpeed;
 			} else if (pos_Y_ShipSpeed < 0) {
 				pos_Y_ShipSpeed = 0;
 			}
@@ -122,7 +117,7 @@ public class Player1Movement : MonoBehaviour
 		}
 		if (downPressed == false) {
 			if (neg_Y_ShipSpeed < 0) {
-				neg_Y_ShipSpeed += declerationSpeed;
+				neg_Y_ShipSpeed += decelerationSpeed;
 			} else if (neg_Y_ShipSpeed > 0) {
 				neg_Y_ShipSpeed = 0;
 			}
