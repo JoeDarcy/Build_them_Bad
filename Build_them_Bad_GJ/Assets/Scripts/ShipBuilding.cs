@@ -68,6 +68,10 @@ public class ShipBuilding : MonoBehaviour
     public static int p2_shieldStrength = 0;
     public static int p2_weaponStrength = 0;
 
+    // Build progress
+    public static bool shipBuildingComplete = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -192,6 +196,12 @@ public class ShipBuilding : MonoBehaviour
         p1_totalShipStrength = p1_hullStrength + p1_shieldStrength + p1_weaponStrength;
         // Player 2
         p2_totalShipStrength = p2_hullStrength + p2_shieldStrength + p2_weaponStrength;
+
+        //=================================== Build Progress ===================================
+        // Check if both ships are built to minimum strength
+        if (p1_totalShipStrength >= 6 && p2_totalShipStrength >= 6) { // Fix this shit!
+	        shipBuildingComplete = true;
+        }
 
         //=================================== Strength Output ===================================
         // Output total ship strength
