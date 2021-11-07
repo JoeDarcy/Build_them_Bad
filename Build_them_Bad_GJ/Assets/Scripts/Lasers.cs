@@ -33,6 +33,7 @@ public class Lasers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		// Player 1
 	    if (ShipBuilding.p1_specialWeaponStrength == 1) {
 		    p1_laserChoice = p1_laser_1;
 		    p1_laserRate = Random.Range(6, 8);
@@ -44,13 +45,14 @@ public class Lasers : MonoBehaviour
 		    p1_laserRate = Random.Range(4, 8);
         }
 
+		// Player 2
 	    if (ShipBuilding.p2_specialWeaponStrength == 1) {
 		    p2_laserChoice = p2_laser_1;
 		    p2_laserRate = Random.Range(6, 8);
-        } else if (ShipBuilding.p1_specialWeaponStrength == 2) {
+        } else if (ShipBuilding.p2_specialWeaponStrength == 2) {
 		    p2_laserChoice = p2_laser_2;
 		    p2_laserRate = Random.Range(5, 8);
-        } else if (ShipBuilding.p1_specialWeaponStrength == 3) {
+        } else if (ShipBuilding.p2_specialWeaponStrength == 3) {
 		    p2_laserChoice = p2_laser_3;
 		    p2_laserRate = Random.Range(4, 8);
         }
@@ -61,15 +63,13 @@ public class Lasers : MonoBehaviour
 	    {
 		    p1_timer -= Time.deltaTime;
 	    }
-
-	    if (p1_timer < 0)
+		if (p1_timer < 0)
 	    {
 		    p1_laserChoice.SetActive(true);
 		    p1_timer = p1_laserRate;
 		    p1_laserKillTimer = 0.5f;
 	    }
-
-	    if (p1_laserKillTimer > 0)
+		if (p1_laserKillTimer > 0)
 	    {
 		    p1_laserKillTimer -= Time.deltaTime;
 	    }
@@ -79,28 +79,26 @@ public class Lasers : MonoBehaviour
 		}
 
 		
-
 		// Player 2 Lasers
-	    if (p2_timer > 0) {
+	    if (p2_timer >= 0) {
 		    p2_timer -= Time.deltaTime;
 	    }
-
 	    if (p2_timer < 0) {
 		    p2_laserChoice.SetActive(true);
 		    p2_timer = p2_laserRate;
 		    p2_laserKillTimer = 0.5f;
 		}
-
 	    if (p2_laserKillTimer > 0) {
 		    p2_laserKillTimer -= Time.deltaTime;
 	    } else {
 		    p2_laserChoice.SetActive(false);
 	    }
 
-
+		/*
 		Debug.Log("Player 1 laser choice: " + p1_laserChoice);
 	    Debug.Log("Player 2 laser choice: " + p2_laserChoice);
 	    Debug.Log("Player 1 laser rate: " + p1_laserRate);
 	    Debug.Log("Player 2 laser rate: " + p2_laserRate);
+		*/
     }
 }
