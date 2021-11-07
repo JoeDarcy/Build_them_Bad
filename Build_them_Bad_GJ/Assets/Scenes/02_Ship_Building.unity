@@ -5020,7 +5020,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1265335418
 GameObject:
@@ -7702,7 +7702,7 @@ Transform:
   - {fileID: 431737542}
   - {fileID: 1118330200}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1895400852
 GameObject:
@@ -8651,6 +8651,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1979198376240448280, guid: 71bc2571491552d468a8d9b10e6c6e03, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722022820553579912, guid: 71bc2571491552d468a8d9b10e6c6e03, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227398572955314657, guid: 71bc2571491552d468a8d9b10e6c6e03, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717338811373171125, guid: 71bc2571491552d468a8d9b10e6c6e03, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717338811557178585, guid: 71bc2571491552d468a8d9b10e6c6e03, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717338812921702061, guid: 71bc2571491552d468a8d9b10e6c6e03, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097521479162054211, guid: 71bc2571491552d468a8d9b10e6c6e03, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7882046849715972559, guid: 71bc2571491552d468a8d9b10e6c6e03, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -9197,6 +9225,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1426096597490166476, guid: 67925ef42d5cf0e40bd9aeae8249bbb3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081885781823723704, guid: 67925ef42d5cf0e40bd9aeae8249bbb3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413126608151971182, guid: 67925ef42d5cf0e40bd9aeae8249bbb3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085317712022204679, guid: 67925ef42d5cf0e40bd9aeae8249bbb3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8137844211140550161, guid: 67925ef42d5cf0e40bd9aeae8249bbb3, type: 3}
       propertyPath: m_Name
       value: Player_2
