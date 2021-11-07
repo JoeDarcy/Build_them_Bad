@@ -984,27 +984,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8230138497232154558, guid: 0bdd6d0590d00524d950d696fe8e5de6, type: 3}
   m_PrefabInstance: {fileID: 8137844210690586387}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &1263530324
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8137844212336930617}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1001 &1274580032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3749,10 +3728,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8137844212336930618}
-  - component: {fileID: 1263530324}
   - component: {fileID: 1263530298}
   - component: {fileID: 1263530297}
   - component: {fileID: 8137844212336930619}
+  - component: {fileID: 8137844212336930620}
   m_Layer: 0
   m_Name: Player_2
   m_TagString: Player_2
@@ -3806,6 +3785,18 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5679578115507149946, guid: a4b2ebf6156f34c43aa2aa2884ac5f29, type: 3}
   p1Target: {fileID: 0}
   p2Target: {fileID: 0}
+--- !u!114 &8137844212336930620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8137844212336930617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3abd8ed24805a554e8f216782afc9658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8782318909476120263
 PrefabInstance:
   m_ObjectHideFlags: 0

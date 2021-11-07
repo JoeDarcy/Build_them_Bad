@@ -7,11 +7,7 @@ public class Shooting : MonoBehaviour
 {
     [SerializeField] Transform p1FirePoint;
     public GameObject bulletPrefab;
-
     private GameObject bulletInstance = null;
-
-    [SerializeField] private Transform p1Target = null;
-    [SerializeField] private Transform p2Target = null;
 
     void Update()
     {
