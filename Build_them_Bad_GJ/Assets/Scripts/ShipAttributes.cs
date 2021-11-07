@@ -18,8 +18,10 @@ public class ShipAttributes : MonoBehaviour
 	public static int p1_weapon = 0;
 	public static int p2_weapon = 0;
 	// Engines
-	public static int p1_engine = 0;
-	public static int p2_engine = 0;
+	public static float p1_engineAcceleration = 0.0f;
+	public static float p1_engineDeceleration = 0.0f;
+	public static float p2_engineAcceleration = 0.0f;
+	public static float p2_engineDeceleration = 0.0f;
 	//Special Weapons
 	public static int p1_specialWeapon = 0;
 	public static int p2_specialWeapon = 0;
@@ -82,20 +84,44 @@ public class ShipAttributes : MonoBehaviour
 
 		// Set player 1 engine
 		if (ShipBuilding.p1_engineStrength == 1) {
-			p1_engine = 1;
+			p1_engineAcceleration = 0.0001f;
+			p1_engineDeceleration = 0.0001f;
 		} else if (ShipBuilding.p1_engineStrength == 2) {
-			p1_engine = 2;
+			p1_engineAcceleration = 0.0005f;
+			p1_engineDeceleration = 0.0003f;
 		} else if (ShipBuilding.p1_engineStrength == 3) {
-			p1_engine = 3;
+			p1_engineAcceleration = 0.001f;
+			p1_engineDeceleration = 0.0006f;
 		}
 
 		// Set player 2 engine
 		if (ShipBuilding.p2_engineStrength == 1) {
-			p2_engine = 1;
+			p2_engineAcceleration = 0.0001f;
+			p2_engineDeceleration = 0.0001f;
 		} else if (ShipBuilding.p2_engineStrength == 2) {
-			p2_engine = 2;
+			p2_engineAcceleration = 0.0005f;
+			p2_engineDeceleration = 0.0003f;
 		} else if (ShipBuilding.p2_engineStrength == 3) {
-			p2_engine = 3;
+			p2_engineAcceleration = 0.001f;
+			p2_engineDeceleration = 0.0006f;
+		}
+
+		// Set player 1 special weapon
+		if (ShipBuilding.p1_specialWeaponStrength == 1) {
+			p1_specialWeapon = 1;
+		} else if (ShipBuilding.p1_specialWeaponStrength == 2) {
+			p1_specialWeapon = 2;
+		} else if (ShipBuilding.p1_specialWeaponStrength == 3) {
+			p1_specialWeapon = 3;
+		}
+
+		// Set player 2 special weapon
+		if (ShipBuilding.p2_specialWeaponStrength == 1) {
+			p2_specialWeapon = 1;
+		} else if (ShipBuilding.p2_specialWeaponStrength == 2) {
+			p2_specialWeapon = 2;
+		} else if (ShipBuilding.p2_specialWeaponStrength == 3) {
+			p2_specialWeapon = 3;
 		}
 	}
 

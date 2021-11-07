@@ -9,14 +9,9 @@ public class Player2_Movement : MonoBehaviour
 	[SerializeField] private float pos_Y_ShipSpeed = 0.0f;
 	[SerializeField] private float neg_Y_ShipSpeed = 0.0f;
 	[SerializeField] private float maxSpeed = 0.0f;
-	[SerializeField] private float accelerationSpeed = 0.0f;
-	[SerializeField] private float declerationSpeed = 0.0f;
-	/*
-	[SerializeField] private string right = null;
-	[SerializeField] private string left = null;
-	[SerializeField] private string up = null;
-	[SerializeField] private string down = null;
-	*/
+	public static float p2_accelerationSpeed = 0.0f;
+	public static float p2_decelerationSpeed = 0.0f;
+
 	private bool rightPressed = false;
 	private bool leftPressed = false;
 	private bool upPressed = false;
@@ -29,6 +24,10 @@ public class Player2_Movement : MonoBehaviour
 
 	// Update is called once per frame
 	void Update() {
+
+		// Update acceleration and deceleration based of ship attributes
+		p2_accelerationSpeed = ShipAttributes.p2_engineAcceleration;
+		p2_decelerationSpeed = ShipAttributes.p2_engineDeceleration;
 
 		// Right pressed
 		if (Input.GetKeyDown(KeyCode.RightArrow)) {
@@ -69,12 +68,12 @@ public class Player2_Movement : MonoBehaviour
 		// Right acceleration
 		if (rightPressed == true) {
 			if (pos_X_ShipSpeed <= maxSpeed) {
-				pos_X_ShipSpeed += accelerationSpeed;
+				pos_X_ShipSpeed += p2_accelerationSpeed;
 			}
 		}
 		if (rightPressed == false) {
 			if (pos_X_ShipSpeed > 0) {
-				pos_X_ShipSpeed -= declerationSpeed;
+				pos_X_ShipSpeed -= p2_decelerationSpeed;
 			} else if (pos_X_ShipSpeed < 0) {
 				pos_X_ShipSpeed = 0;
 			}
@@ -83,12 +82,12 @@ public class Player2_Movement : MonoBehaviour
 		// Left acceleration
 		if (leftPressed == true) {
 			if (neg_X_ShipSpeed >= -maxSpeed) {
-				neg_X_ShipSpeed -= accelerationSpeed;
+				neg_X_ShipSpeed -= p2_accelerationSpeed;
 			}
 		}
 		if (leftPressed == false) {
 			if (neg_X_ShipSpeed < 0) {
-				neg_X_ShipSpeed += declerationSpeed;
+				neg_X_ShipSpeed += p2_decelerationSpeed;
 			} else if (neg_X_ShipSpeed > 0) {
 				neg_X_ShipSpeed = 0;
 			}
@@ -97,12 +96,12 @@ public class Player2_Movement : MonoBehaviour
 		// Up acceleration
 		if (upPressed == true) {
 			if (pos_Y_ShipSpeed <= maxSpeed) {
-				pos_Y_ShipSpeed += accelerationSpeed;
+				pos_Y_ShipSpeed += p2_accelerationSpeed;
 			}
 		}
 		if (upPressed == false) {
 			if (pos_Y_ShipSpeed > 0) {
-				pos_Y_ShipSpeed -= declerationSpeed;
+				pos_Y_ShipSpeed -= p2_decelerationSpeed;
 			} else if (pos_Y_ShipSpeed < 0) {
 				pos_Y_ShipSpeed = 0;
 			}
@@ -111,12 +110,12 @@ public class Player2_Movement : MonoBehaviour
 		// Down acceleration
 		if (downPressed == true) {
 			if (neg_Y_ShipSpeed >= -maxSpeed) {
-				neg_Y_ShipSpeed -= accelerationSpeed;
+				neg_Y_ShipSpeed -= p2_accelerationSpeed;
 			}
 		}
 		if (downPressed == false) {
 			if (neg_Y_ShipSpeed < 0) {
-				neg_Y_ShipSpeed += declerationSpeed;
+				neg_Y_ShipSpeed += p2_decelerationSpeed;
 			} else if (neg_Y_ShipSpeed > 0) {
 				neg_Y_ShipSpeed = 0;
 			}

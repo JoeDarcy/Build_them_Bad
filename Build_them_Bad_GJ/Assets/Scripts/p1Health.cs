@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class p1Health : MonoBehaviour
 {
+	[SerializeField] private GameObject explosion = null;
+	private GameObject explosionInstance = null;
+
+	private void Update() {
+		if (ShipAttributes.p1_health <= 0)
+		{
+			explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity);
+			gameObject.SetActive(false);
+		}
+	}
+
+
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if (ShipAttributes.p1_hit == true)
 		{
@@ -13,6 +25,5 @@ public class p1Health : MonoBehaviour
 		} else {
 			Debug.Log("Player 2 evaded hit");
 		}
-		
 	}
 }

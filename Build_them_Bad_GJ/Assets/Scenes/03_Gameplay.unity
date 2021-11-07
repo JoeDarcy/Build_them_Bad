@@ -421,8 +421,6 @@ MonoBehaviour:
   pos_Y_ShipSpeed: 0
   neg_Y_ShipSpeed: 0
   maxSpeed: 0.1
-  accelerationSpeed: 0.0001
-  decelerationSpeed: 0.0001
 --- !u!4 &421912408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7576197002426075886, guid: 04ae2182f2d63664e8e1ca6d5602321b, type: 3}
@@ -881,8 +879,6 @@ MonoBehaviour:
   pos_Y_ShipSpeed: 0
   neg_Y_ShipSpeed: 0
   maxSpeed: 0.1
-  accelerationSpeed: 0.0001
-  declerationSpeed: 0.0001
 --- !u!61 &1263530298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1977,8 +1973,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p1FirePoint: {fileID: 1248252322}
   bulletPrefab: {fileID: 3849525523876669067, guid: 3eb228bb499c1a149815f84366bb9606, type: 3}
-  p1Target: {fileID: 0}
-  p2Target: {fileID: 0}
 --- !u!114 &97561124207472093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1991,6 +1985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a057ef7b9e130040ae7ffe6fe4f5845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 7117925949722260715, guid: 4034b2d54f1932c4389db12588090753, type: 3}
 --- !u!61 &97561124207472094
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3783,8 +3778,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p1FirePoint: {fileID: 188726995}
   bulletPrefab: {fileID: 5679578115507149946, guid: a4b2ebf6156f34c43aa2aa2884ac5f29, type: 3}
-  p1Target: {fileID: 0}
-  p2Target: {fileID: 0}
 --- !u!114 &8137844212336930620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3797,6 +3790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3abd8ed24805a554e8f216782afc9658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 7117925949722260715, guid: 4034b2d54f1932c4389db12588090753, type: 3}
 --- !u!1001 &8782318909476120263
 PrefabInstance:
   m_ObjectHideFlags: 0
