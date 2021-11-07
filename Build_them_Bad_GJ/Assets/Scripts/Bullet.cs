@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
 		direction.Normalize();
 		float rotateAmount = Vector3.Cross(direction, transform.up).z;
 		rb.angularVelocity = rotateAmount * -rotateSpeed;
-		rb.velocity = transform.up * speed;
+		rb.velocity = transform.forward * speed;
 	}
 	void OnTriggerEnter2D ()
 	{

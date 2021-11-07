@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class HomingMissile : MonoBehaviour
 {
-    public Transform target = null;
-    public Rigidbody missileRb;
+    private Transform target = null;
+    [SerializeField] private Rigidbody2D missileRb;
     public float speed = 25.0f;
     public float rotateSpeed = 2.0f;
 
-    // Update is called once per frame
-    void FixedUpdate()
+	private void Awake() {
+		target = GameObject.FindGameObjectWithTag("Player_2").transform;
+    }
+	// Update is called once per frame
+	void FixedUpdate()
     {
         missileRb.velocity = transform.forward * speed;
         var rotateAmount = Quaternion.LookRotation(target.position - transform.position);
