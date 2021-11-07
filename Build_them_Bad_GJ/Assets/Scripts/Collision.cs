@@ -9,9 +9,7 @@ public class Collision : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-        ShipAttributes.p2_health -= 1;
-        hitInstance = Instantiate(hitFX, transform.position, Quaternion.identity);
+		hitInstance = Instantiate(hitFX, transform.position, Quaternion.identity);
         Destroy(gameObject);
 	}
-
 }

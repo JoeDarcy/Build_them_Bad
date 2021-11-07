@@ -70,40 +70,40 @@ public class ShipAttributes : MonoBehaviour
 	    } else if (ShipBuilding.p1_weaponStrength == 2) {
 			p1_weapon = 2;
 	    } else if (ShipBuilding.p1_weaponStrength == 3) {
-			p1_weapon = 3;
+			p1_weapon = 2;
 	    }
 
 		// Set player 2 weapon
 		if (ShipBuilding.p2_weaponStrength == 1) {
 			p2_weapon = 1;
 	    } else if (ShipBuilding.p2_weaponStrength == 2) {
-			p2_weapon = 2;
+			p2_weapon = Random.Range(1, 2); ;
 	    } else if (ShipBuilding.p2_weaponStrength == 3) {
-			p2_weapon = 3;
+			p2_weapon = Random.Range(1, 3); ;
 	    }
 
 		// Set player 1 engine
 		if (ShipBuilding.p1_engineStrength == 1) {
-			p1_engineAcceleration = 0.0001f;
-			p1_engineDeceleration = 0.0001f;
+			p1_engineAcceleration = 0.08f;
+			p1_engineDeceleration = 0.001f;
 		} else if (ShipBuilding.p1_engineStrength == 2) {
-			p1_engineAcceleration = 0.0005f;
-			p1_engineDeceleration = 0.0003f;
+			p1_engineAcceleration = 0.2f;
+			p1_engineDeceleration = 0.003f;
 		} else if (ShipBuilding.p1_engineStrength == 3) {
-			p1_engineAcceleration = 0.001f;
-			p1_engineDeceleration = 0.0006f;
+			p1_engineAcceleration = 0.5f;
+			p1_engineDeceleration = 0.006f;
 		}
 
 		// Set player 2 engine
 		if (ShipBuilding.p2_engineStrength == 1) {
-			p2_engineAcceleration = 0.0002f;
-			p2_engineDeceleration = 0.0001f;
+			p2_engineAcceleration = 0.08f;
+			p2_engineDeceleration = 0.001f;
 		} else if (ShipBuilding.p2_engineStrength == 2) {
-			p2_engineAcceleration = 0.0005f;
-			p2_engineDeceleration = 0.0002f;
+			p2_engineAcceleration = 0.2f;
+			p2_engineDeceleration = 0.003f;
 		} else if (ShipBuilding.p2_engineStrength == 3) {
-			p2_engineAcceleration = 0.001f;
-			p2_engineDeceleration = 0.0003f;
+			p2_engineAcceleration = 0.5f;
+			p2_engineDeceleration = 0.006f;
 		}
 
 		// Set player 1 special weapon
@@ -128,8 +128,8 @@ public class ShipAttributes : MonoBehaviour
 
 	private void Update() {
 		// Shield hit chance
-		// Player 1 Hull 1
-		if (p1_shieldChance == 1)
+		// Player 1 shield 1
+		if (p1_shieldChance == 2)
 		{
 			p1_diceRoll = Random.Range(1, 10);
 
@@ -140,8 +140,8 @@ public class ShipAttributes : MonoBehaviour
 				p1_hit = false;
 			}
 		}
-		// Player 1 Hull 2
-		if (p1_shieldChance == 2) {
+		// Player 1 shield 2
+		if (p1_shieldChance == 3) {
 			p1_diceRoll = Random.Range(1, 10);
 
 			if (p1_diceRoll > 3) {
@@ -150,8 +150,8 @@ public class ShipAttributes : MonoBehaviour
 				p1_hit = false;
 			}
 		}
-		// Player 1 Hull 3
-		if (p1_shieldChance == 3) {
+		// Player 1 shield 3
+		if (p1_shieldChance == 5) {
 			p1_diceRoll = Random.Range(1, 10);
 
 			if (p1_diceRoll > 5) {
@@ -161,8 +161,8 @@ public class ShipAttributes : MonoBehaviour
 			}
 		}
 
-		// Player 2 Hull 1
-		if (p2_shieldChance == 1) {
+		// Player 2 shield 1
+		if (p2_shieldChance == 2) {
 			p2_diceRoll = Random.Range(1, 10);
 
 			if (p2_diceRoll > 2) {
@@ -171,8 +171,8 @@ public class ShipAttributes : MonoBehaviour
 				p2_hit = false;
 			}
 		}
-		// Player 2 Hull 2
-		if (p2_shieldChance == 2) {
+		// Player 2 shield 2
+		if (p2_shieldChance == 3) {
 			p2_diceRoll = Random.Range(1, 10);
 
 			if (p2_diceRoll > 3) {
@@ -181,8 +181,8 @@ public class ShipAttributes : MonoBehaviour
 				p2_hit = false;
 			}
 		}
-		// Player 2 Hull 3
-		if (p2_shieldChance == 3) {
+		// Player 2 shield 3
+		if (p2_shieldChance == 5) {
 			p2_diceRoll = Random.Range(1, 10);
 
 			if (p2_diceRoll > 5) {

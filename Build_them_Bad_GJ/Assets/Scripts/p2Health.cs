@@ -7,6 +7,10 @@ public class p2Health : MonoBehaviour {
 	private GameObject explosionInstance = null;
 
 	private void Update() {
+
+		Debug.Log("Player shields: " + ShipAttributes.p2_shieldChance);
+		Debug.Log("Player 2 health: " + ShipAttributes.p2_health);
+
 		if (ShipAttributes.p2_health <= 0) {
 			explosionInstance = Instantiate(explosion, transform.position, Quaternion.identity);
 			gameObject.SetActive(false);
