@@ -23,8 +23,8 @@ public class Player1Movement : MonoBehaviour
 	    pos_X_ShipSpeed = 0.0f;
     }
 
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	void Update()
     {
 		// Update acceleration and deceleration based of ship attributes
 		p1_accelerationSpeed = ShipAttributes.p1_engineAcceleration;

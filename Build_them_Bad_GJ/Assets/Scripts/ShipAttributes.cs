@@ -96,14 +96,14 @@ public class ShipAttributes : MonoBehaviour
 
 		// Set player 2 engine
 		if (ShipBuilding.p2_engineStrength == 1) {
-			p2_engineAcceleration = 0.0001f;
+			p2_engineAcceleration = 0.0002f;
 			p2_engineDeceleration = 0.0001f;
 		} else if (ShipBuilding.p2_engineStrength == 2) {
 			p2_engineAcceleration = 0.0005f;
-			p2_engineDeceleration = 0.0003f;
+			p2_engineDeceleration = 0.0002f;
 		} else if (ShipBuilding.p2_engineStrength == 3) {
 			p2_engineAcceleration = 0.001f;
-			p2_engineDeceleration = 0.0006f;
+			p2_engineDeceleration = 0.0003f;
 		}
 
 		// Set player 1 special weapon
