@@ -259,6 +259,7 @@ public class ShipBuilding : MonoBehaviour
         //=================================== Strength Output ===================================
         // Output total ship strength
         // Player 1
+        /*
         Debug.Log("Player 1 total Ship Strength: " + p1_totalShipStrength);
         Debug.Log("Player 1 hull Strength: " + p1_hullStrength);
         Debug.Log("Player 1 shield Strength: " + p1_shieldStrength);
@@ -272,7 +273,7 @@ public class ShipBuilding : MonoBehaviour
         Debug.Log("Player 2 weapon Strength: " + p2_weaponStrength);
         Debug.Log("Player 2 engine Strength: " + p2_engineStrength);
         Debug.Log("Player 2 special weapon Strength: " + p2_specialWeaponStrength);
-
+        */
 
         //=================================== Player 1 Component Selection ===================================
         // Player 1 hull selection

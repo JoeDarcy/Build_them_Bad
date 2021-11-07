@@ -60,6 +60,7 @@ public class ShipAttributes : MonoBehaviour
 
 	private void Update() {
 		// Shield hit chance
+		// Player 1 Hull 1
 		if (p1_shieldChance == 1)
 		{
 			p1_diceRoll = Random.Range(1, 10);
@@ -68,6 +69,26 @@ public class ShipAttributes : MonoBehaviour
 				p1_hit = true;
 			}
 			else {
+				p1_hit = false;
+			}
+		}
+		// Player 1 Hull 2
+		if (p1_shieldChance == 2) {
+			p1_diceRoll = Random.Range(1, 10);
+
+			if (p1_diceRoll > 3) {
+				p1_hit = true;
+			} else {
+				p1_hit = false;
+			}
+		}
+		// Player 1 Hull 3
+		if (p1_shieldChance == 3) {
+			p1_diceRoll = Random.Range(1, 10);
+
+			if (p1_diceRoll > 5) {
+				p1_hit = true;
+			} else {
 				p1_hit = false;
 			}
 		}
